@@ -7,11 +7,14 @@ def Main():
     Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
     sort_dict = Sorter(Dir)  # Give the directory as an input
 
+    print("-Values in GB-\n")
     for i in sort_dict:
         if i[1] < 0:
             print(f"NO ACCES : {i[0]}")
         else:
             print(f"{i[1]} : {i[0]}")
+
+    input("\nPress enter to exit")  # Exit program
 
 
 def get_dir_size(Dir):  # Returns the `directory` size in bytes.
