@@ -7,7 +7,7 @@ def Main():
     Tk().withdraw()  # use to hide tkinter window
     Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
 
-    print("LOADING...") # Sometimes it takes long to output results, this just indicates that the program is working and not broken
+    print("LOADING...")  # Sometimes it takes long to output results, this just indicates that the program is working and not broken
     sort_dict = Sorter(Dir)  # Give the directory as an input
 
     print("\n-SORTED-\n")
@@ -23,7 +23,8 @@ def Main():
             fixed_float = float("{:.3f}".format(mega_float))
             data_type = "MB:   "
 
-        white_space = " " * (8 - len(str(fixed_float)))
+        dflt_white_space = 8
+        white_space = " " * (dflt_white_space - len(str(fixed_float)))
         print(f"{fixed_float}  {white_space + data_type + i[0]}")
 
     input("\nPress enter to exit")  # Wait to exit the program
