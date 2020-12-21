@@ -8,12 +8,12 @@ def Main():
     Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
     sort_dict = Sorter(Dir)  # Give the directory as an input
 
-    print("-Sorted values in GB-\n")
+    print("-SORTED-\n")
     for i in sort_dict:
         if i[1] < 0:
             print(f"NO ACCES : {i[0]}")
         else:
-            print(f"{i[1]} : {i[0]}")
+            print(f"{i[1]} GB: {i[0]}")
 
     input("\nPress enter to exit")  # Wait to exit the program
 
@@ -29,7 +29,7 @@ def get_dir_size(Dir):  # Returns the `directory` size in bytes.
     except NotADirectoryError:  # if `directory` isn't a directory, get the file size
         return os.path.getsize(Dir)
     except PermissionError:  # if for whatever reason we can't open the folder, return -1
-        return -999999  # returns a negative size that will be visible after the conversion
+        return -999999  # returns a negative size that will be visible (to use conditions) after the conversion
     return total
 
 
