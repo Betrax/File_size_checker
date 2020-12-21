@@ -6,9 +6,11 @@ from tkinter.filedialog import askdirectory
 def Main():
     Tk().withdraw()  # use to hide tkinter window
     Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
+
+    print("LOADING...") # Sometimes it takes long to output results, this just indicates that the program is working and not broken
     sort_dict = Sorter(Dir)  # Give the directory as an input
 
-    print("-SORTED-\n")
+    print("\n-SORTED-\n")
     for i in sort_dict:
         if i[1] > 1:  # continues using gigabytes
             fixed_float = float("{:.3f}".format(i[1]))
