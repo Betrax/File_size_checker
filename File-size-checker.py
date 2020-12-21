@@ -27,7 +27,8 @@ def Main():
         white_space = " " * (dflt_white_space - len(str(fixed_float)))
         print(f"{fixed_float}  {white_space + data_type + i[0]}")
 
-    input("\nPress enter to exit")  # Wait to exit the program
+    if input("\nPress 'r' to retry, press anything else to exit\n") == "r":
+        Main()
 
 
 def get_dir_size(Dir):  # Returns the `directory` size in bytes.
