@@ -10,7 +10,6 @@ def Main():
 
     print("-SORTED-\n")
     for i in sort_dict:
-
         if i[1] > 1:  # continues using gigabytes
             fixed_float = float("{:.3f}".format(i[1]))
             data_type = "GB:   "
