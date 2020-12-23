@@ -4,12 +4,16 @@ from tkinter.filedialog import askdirectory
 
 
 def Main():
+
     Tk().withdraw()  # use to hide tkinter window
     Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
+    Printer(Dir)
+
+
+def Printer(Dir):
 
     print("LOADING...")  # Sometimes it takes long to output results, this just indicates that the program is working and not broken
     sort_dict = Sorter(Dir)  # Give the directory as an input
-
     print("\n-SORTED-\n")
     for i in sort_dict:
         if i[1] > 1:  # continues using gigabytes
@@ -32,6 +36,7 @@ def Main():
 
 
 def get_dir_size(Dir):  # Returns the `directory` size in bytes.
+
     total = 0
     try:
         for entry in os.scandir(Dir):  # print("[+] Getting the size of", directory)
@@ -47,6 +52,7 @@ def get_dir_size(Dir):  # Returns the `directory` size in bytes.
 
 
 def get_subdirs(Dir):
+
     dir_array = []
     for x in os.listdir(Dir):
         dir_array.append(x)
