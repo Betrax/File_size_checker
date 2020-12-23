@@ -53,9 +53,7 @@ def get_dir_size(Dir):  # Returns the `directory` size in bytes.
 
 def get_subdirs(Dir):
 
-    dir_array = []
-    for x in os.listdir(Dir):
-        dir_array.append(x)
+    dir_array = os.listdir(Dir)
     return dir_array
 
 
