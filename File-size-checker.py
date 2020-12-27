@@ -13,7 +13,7 @@ def Main():
 def Printer(Dir, GIGABYTES_IN_MEGABYTES = 1024):
 
     print("LOADING...")  # Sometimes it takes long to output results, this just indicates that the program is working and not broken
-    sort_dict = Sorter(Dir)  # Give the directory as an inpu
+    sort_dict = Sorter(Dir)  # Give the directory as an input
     print("\n-SORTED-\n")
     for i in sort_dict:
         if i[1] > 1:  # continues using gigabytes
