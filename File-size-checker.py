@@ -35,7 +35,7 @@ def Printer(Dir, GIGABYTES_IN_MEGABYTES = 1024):
         Main()
 
 
-def get_dir_size(Dir):  # Returns the `directory` size in bytes.
+def get_dir_size(Dir):  # Returns the `directory` size in bytes
 
     total = 0
     try:
