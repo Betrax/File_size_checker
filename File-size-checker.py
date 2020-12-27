@@ -10,7 +10,7 @@ def Main():
     Printer(Dir)
 
 
-def Printer(Dir, GIGABYTES_IN_MEGABYTES = 1024):
+def Printer(Dir, GIGABYTES_IN_MEGABYTES=1024):
 
     print("LOADING...")  # Sometimes it takes long to output results, this just indicates that the program is working and not broken
     sort_dict = Sorter(Dir)  # Give the directory as an input
@@ -57,7 +57,7 @@ def get_subdirs(Dir):
     return dir_array
 
 
-def Sorter(Dir, GIGABYTES_IN_BYTES = 1073741824):
+def Sorter(Dir, GIGABYTES_IN_BYTES=1073741824):
 
     Dict = {}
     dir_array = get_subdirs(Dir)
