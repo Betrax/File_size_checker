@@ -10,7 +10,7 @@ def Main():
     Printer(Dir)
 
 
-def Printer(Dir):
+def Printer(Dir, GIGABYTES_IN_MEGABYTES = 1024):
 
     print("LOADING...")  # Sometimes it takes long to output results, this just indicates that the program is working and not broken
     sort_dict = Sorter(Dir)  # Give the directory as an input
@@ -23,7 +23,7 @@ def Printer(Dir):
             print(f"NO ACCES : {i[0]}")
             continue
         else:  # convert to megabytes
-            mega_float = i[1] * 1024
+            mega_float = i[1] * GIGABYTES_IN_MEGABYTES
             fixed_float = float("{:.3f}".format(mega_float))
             data_type = "MB:   "
 
@@ -57,13 +57,13 @@ def get_subdirs(Dir):
     return dir_array
 
 
-def Sorter(Dir):
+def Sorter(Dir, GIGABYTES_IN_BYTES = 1073741824):
 
     Dict = {}
     dir_array = get_subdirs(Dir)
 
     for x in range(len(dir_array)):
-        file_size = float(get_dir_size(Dir + "\\" + dir_array[x])) / 1073741824  # Converts the bytes to GB
+        file_size = float(get_dir_size(Dir + "\\" + dir_array[x])) / GIGABYTES_IN_BYTES  # Converts the bytes to GB
 
         Dict[dir_array[x]] = file_size
 
