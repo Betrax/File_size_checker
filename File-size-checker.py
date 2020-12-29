@@ -6,7 +6,7 @@ from tkinter.filedialog import askdirectory
 def Main():
 
     Tk().withdraw()  # use to hide tkinter window
-    Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path
+    Dir = askdirectory(title="Select Folder")  # shows dialog box and return the path.
     Printer(Dir)
 
 
